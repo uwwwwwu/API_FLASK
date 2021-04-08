@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Nanum+Gothic:wght@700;800&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="./dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./dist/owl.carousel.js"></script>
+    <script src="./dist/owl.carousel.min.js"></script>
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+
+    <style>
+      
+
+      body {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-family: 'Nanum Gothic Coding', monospace;
+        font-family: 'Noto Sans KR', sans-serif;
+
+      } 
+      
+      .image-container{
+        background-image: url('./img/Sample_{{local_code}}.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top center;
+        height: 300px;
+      }
+      
+      #v_index{ 
+        
+        width: 1200px; 
+        height: 400px; 
+        border: 1px solid dimgrey;
+        margin: 0 auto; 
+      } 
+
+      #v_header{ 
+        height: 100px; 
+        border-bottom: 1px solid dimgrey;
+        box-sizing: border-box; 
+        text-align: center; 
+        line-height: 100px; 
+        font-size: 1.5rem; 
+      } 
+
+      #v_slide{ 
+        height: 300px; 
+        border-bottom: 1px solid dimgrey; 
+      } 
+
+      #v_slide>ul>li{ 
+        position: absolute; 
+        font-size: 0;
+      }
+
+   
+      
+      ul {
+      list-style: none;
+      }
+
+      ul li:before {
+        content: '✓ ';
+      }
+      div.base {
+        margin-left: 19.5%;
+        width: 79%;
+        height: 300px;
+
+      }
+
+      div.left {
+        margin-top: 1.2%;
+          width: 49%;
+          float: left;
+          box-sizing: border-box;
+          
+
+
+      }
+
+      div.L_R {
+          margin-top: 1.2%;
+          width: 1%;
+          float: left;
+          box-sizing: border-box;
+
+      }
+
+      div.right {
+          margin-top: 1.2%;
+          width: 49%;
+          float: right;
+          box-sizing: border-box;
+
+      }
+
+      div.v_base {
+        width: 100%;
+        height: 250px;
+
+      }
+
+      div.v_left {
+          width: 25%;
+          height: 100%;
+          float: left;
+          box-sizing: border-box;
+      }
+
+      div.gap{
+          width: 1%;
+          height: 100%;
+          float: left;
+          box-sizing: border-box;
+          z-index: 1;
+          position: relative;
+          top: 33%
+      }
+
+      div.gap_img{
+        height: 100%;
+        max-width: 100%;
+      }
+
+      div.gap_right{
+          width: 1%;
+          height: 100%;
+          float: left;
+          box-sizing: border-box;
+          z-index: 1;
+          position: relative;
+          left: -4%;
+          top: 33%
+
+      }
+
+      div.v_center {
+          width: 48%;
+          height: 100%;
+          float: left;
+          box-sizing: border-box;
+
+          
+      }
+      
+
+      div.v_right {
+          width: 25%;
+          height: 100%;
+          float: right;
+          box-sizing: border-box;
+      }
+
+      
+      
+      div.front{
+        margin-top: 60%;
+        text-align: center;
+      }
+
+      div.realcenter{
+        margin-top: 6%;
+        text-align: center;
+      }
+
+      div.back{
+        margin-top: 60%;
+        text-align: center;
+      }
+      
+    </style>
+
+</head>
+
+<body>
+    <main>
+      <div class="image-container">
+          <div class="base">
+              <div class="left">
+                <div class="v_base">
+                  <!--1-->
+                  <div class="v_left">
+                    <div class="front">
+                      <div class="fadeOut owl-carousel">
+                        {% for i in range(1,50) %}
+                        <div class="item">
+                          <h4>{{ s_data[i-1][0] }}<br></h4>
+                        </div>
+                        {% endfor %}
+                      
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--gap-->
+                  <div class="gap">
+                    <div class="gap_img">
+                      <img src="./img/s_front.PNG" style="position: absolute; width: 45px;">
+                    </div>
+                  </div>
+
+                   
+
+                  <!--2-->
+                  <div class="v_center">
+                    <div class="realcenter">
+                      <div class="fadeOut owl-carousel">
+                        {% for i in range(1,50) %}
+                        <div class="item">
+                          <p style="font-size: 40px;">{{ s_data[i][0] }}</p>
+                          <h5>{{ s_data[i][1] }}<br></h5>
+                          <h5>{{ s_data[i][2] }}<br></h5>
+                          <h5>{{ s_data[i][3] }}<br></h5>
+                        </div>
+                        {% endfor %}
+                      
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--gap-->
+                  <div class="gap_right">
+                    <div class="gap_img">
+                      <img src="./img/s_back.PNG" style="position: absolute; width: 45px;">
+                    </div>
+                  </div>
+
+                  <!--3-->
+                  <div class="v_right">
+                    <div class="back">
+                      <div class="fadeOut owl-carousel">
+                        {% for i in range(1,50) %}
+                        <div class="item">
+                          <h4>{{ s_data[i+1][0] }}<br></h4>
+                        </div>
+                        {% endfor %}
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="L_R">
+                <br>
+
+              </div>
+
+              <div class="right">
+                <div class="v_base">
+                  <!--1-->
+                  <div class="v_left">
+                    <div class="front">
+                      <div class="fadeOut owl-carousel">
+                        {% for i in range(1,50) %}
+                        <div class="item">
+                          <h4>{{ etc_data[i-1][0] }}<br></h4>
+                        </div>
+                        {% endfor %}
+                      
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--gap-->
+                  <div class="gap">
+                    <div class="gap_img">
+                      <img src="./img/etc_front.PNG" style="position: absolute; width: 45px;">
+                    </div>
+                  </div>
+
+                  <!--2-->
+                  <div class="v_center">
+                    <div class="realcenter">
+                      <div class="fadeOut owl-carousel">
+                        {% for i in range(1,50) %}
+                        <div class="item">
+                          <p style="font-size: 40px;">{{ etc_data[i][0] }}</p>
+                          <h5>{{ etc_data[i][1] }}<br></h5>
+                          <h5>{{ etc_data[i][2] }}<br></h5>
+                          <h5>{{ etc_data[i][3] }}<br></h5>
+                        </div>
+                        {% endfor %}
+                      
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!--gap-->
+                  <div class="gap_right">
+                    <div class="gap_img">
+                      <img src="./img/etc_back.PNG" style="position: absolute; width: 45px;">
+                    </div>
+                  </div>
+
+                  <!--3-->
+                  <div class="v_right">
+                    <div class="back">
+                      <div class="fadeOut owl-carousel">
+                        {% for i in range(1,50) %}
+                        <div class="item">
+                          <h4>{{ etc_data[i+1][0] }}<br></h4>
+                        </div>
+                        {% endfor %}
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            
+          </div>
+
+          <!-- Inner -->
+
+        <!--</div>-->
+      </div>
+      <!-- Carousel wrapper -->
+      
+    <script>
+      jQuery(document).ready(function($) {
+              $('.fadeOut').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 8000,
+                smartSpeed: 0,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                nav: false,
+                dots: false
+              });
+      });
+      
+    </script>
+
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+      
+    
+    </footer>
+  
+  </body>
+</html>
