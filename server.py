@@ -144,45 +144,43 @@ for i in range(10):
 
 @app.route('/CB') 
 def indexCB():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[0], local_code=43000) 
-
-
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[0], len_etc=len(etc_data[0]), local_code=43000) 
 
 @app.route('/CN') 
 def indexCN():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[1], local_code=44000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[1], len_etc=len(etc_data[1]), local_code=44000) 
 
 @app.route('/GG') 
 def indexGG():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[2], local_code=41000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[2], len_etc=len(etc_data[2]), local_code=41000) 
 
 @app.route('/INC') 
 def indexINC():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[3], local_code=28000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[3], len_etc=len(etc_data[3]), local_code=28000) 
 
 @app.route('/GN') 
 def indexGN():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[4], local_code=48000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[4], len_etc=len(etc_data[4]), local_code=48000) 
 
 @app.route('/GB') 
 def indexGB():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[5], local_code=47000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[5], len_etc=len(etc_data[5]), local_code=47000) 
 
 @app.route('/JN') 
 def indexJN():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[6], local_code=46000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[6], len_etc=len(etc_data[6]), local_code=46000) 
 
 @app.route('/JB') 
 def indexJB():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[7], local_code=45000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[7], len_etc=len(etc_data[7]), local_code=45000) 
 
 @app.route('/GW') 
 def indexGW():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[8], local_code=42000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[8], len_etc=len(etc_data[8]), local_code=42000) 
 
 @app.route('/JJ') 
 def indexJJ():
-    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[9], local_code=50000) 
+    return render_template('hoon.html',s_data=s_data, etc_data=etc_data[9], len_etc=len(etc_data[9]), local_code=50000) 
 
 
 
