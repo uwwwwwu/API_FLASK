@@ -189,7 +189,7 @@ def task():
 
 #schedule ms
 scheduler = BackgroundScheduler()
-running_task = scheduler.add_job(task, 'interval', seconds=20, max_instances=100)
+running_task = scheduler.add_job(task, 'interval', seconds=30, max_instances=100)
 scheduler.start()
 
 ############################################

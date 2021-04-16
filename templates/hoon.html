@@ -14,13 +14,8 @@
     <link rel="stylesheet" href="./dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="./dist/owl.carousel.js"></script>
-    <script src="./dist/owl.carousel.min.js"></script>
-    <!-- MDB -->
+      <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
-
     <style>
       
 
@@ -219,13 +214,13 @@
                   <!--2-->
                   <div class="v_center">
                     <div class="realcenter">
-                      <div class="fadeOut owl-carousel">
+                      <div class="fadeOut owl-carousel" id="block-2">
                         {% for i in range(1,len_s-1) %}
                         <div class="item">
-                          <h3 id="rand-value" style="color: black;">{{ s_data[i][0] }}</h3>
-                          <h7 id="rand-value" style="color: black;">{{ s_data[i][1] }}<br></h7>
-                          <h7 id="rand-value" style="color: black;">{{ s_data[i][2] }}<br></h7>
-                          <h7 id="rand-value" style="color: black;">{{ s_data[i][3] }}<br></h7>
+                          <h3 id="com-name" style="color: black;">{{ s_data[i][0] }}</h3>
+                          <h6 id="com-value" style="color: black;">{{ s_data[i][1] }}<br></h6>
+                          <h6 id="com-carrier" style="color: black;">{{ s_data[i][2] }}<br></h6>
+                          <h6 id="com-day" style="color: black;">{{ s_data[i][3] }}<br></h6>
                         </div>
                         {% endfor %}
                       
@@ -336,7 +331,11 @@
         <!--</div>-->
       </div>
       <!-- Carousel wrapper -->
-      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+    <script src="./dist/owl.carousel.js"></script>
+    <script src="./dist/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
     <script>
       jQuery(document).ready(function($) {
               $('.fadeOut').owlCarousel({
@@ -353,8 +352,6 @@
       });
       
     </script>
-    <script src="js/script.js"></script>
-    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
     </main>
   
 
