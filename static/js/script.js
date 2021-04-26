@@ -1,34 +1,14 @@
 $(document).ready(() => {
     var socket = io.connect('http://127.0.0.1:5000');
     socket.on('value update', (data)=>{
-        //var ee = {{s_data}};
-        //console.log(ee);
 
         console.log(data["s_data"]);
-        
-        //$("#rand-value").text(data["s_data"][0][0]);
-        //$("#rand-value").text(data["s_data"][0][0]);
-        //$("#rand-value1").text(data["s_data"][0][1]);
+        console.log(data["s_f_data"]);
+        console.log(data["etc_data_CB"]);
 
-        // var element = '';
-        // $('#block-2').empty();
+        //var e = data['s_data'];
+        var e = data['etc_data_JJ'];
 
-        // data["s_data"].forEach(e => {
-        //     var newElement = 
-        //         '<div class="item">'+
-        //         '<h3 id="com-name" style="color: black;">' + e[0] + '</h3>' +
-        //         '<h6 id="com-value" style="color: black;">' + e[1] + '<br></h6>' +
-        //         '<h6 id="com-value" style="color: black;">' + e[2] + '<br></h6>' +
-        //         '<h6 id="com-value" style="color: black;">' + e[3] + '<br></h6>' +
-        //         '</div>';
-        //     // element += newElement;
-        //     $('#block-2').fadeOut().append(element).delay(800).fadeIn();
-        // });
-        // $('#block-2').html(element);
-        // $('#block-2 > .item').each(function(){
-        //     $(this).fadeOut().next().delay(800).fadeIn();
-        // });
-        var e = data['s_data'];
         var fadeInFadeOut = (i) => {
             var getElement = (i) => {
                 if(i==e.length){
